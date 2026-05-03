@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wumpus World</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="overlay" class="overlay hidden">
+    <div class="overlay-box">
+      <div id="overlayIcon" class="overlay-icon"></div>
+      <h2 id="overlayTitle"></h2>
+      <p id="overlayMsg"></p>
+      <button id="overlayReset" type="button">Play Again</button>
+    </div>
+  </div>
+
+  <main class="app-shell">
+    <header class="header">
+      <h1 class="game-title">Wumpus World</h1>
+      <p>Venture into the cursed cave, seize the gold, and escape alive.</p>
+    </header>
+
+    <section class="panel status-panel">
+      <div class="status-row">
+        <span class="status-label">Status</span>
+        <strong id="statusText">Searching the cave...</strong>
+      </div>
+      <div class="status-row">
+        <span class="status-label">Percepts</span>
+        <strong id="perceptsText">None</strong>
+      </div>
+      <div class="status-row">
+        <span class="status-label">Inventory</span>
+        <strong id="inventoryText">Empty-handed</strong>
+      </div>
+    </section>
+
+    <section class="panel board-panel">
+      <div id="board" class="board" aria-label="Wumpus World game board"></div>
+    </section>
+
+    <section class="panel controls-panel">
+      <p class="controls-copy">Use <strong>W A S D</strong> to move through the cave and press <strong>E</strong> to pick up gold.</p>
+      <div class="action-row">
+        <button id="resetButton" class="action-button reset-btn" type="button">New Game</button>
+      </div>
+      <p class="hint">Keyboard only: W A S D to move &middot; E to pick up gold</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
